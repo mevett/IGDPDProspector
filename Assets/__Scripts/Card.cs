@@ -16,7 +16,18 @@ public class Card : MonoBehaviour {
 
 	public GameObject      back; // The GameObject of the back of the card     
 	public CardDefinition  def; // Parsed from DeckXML.xml
+
+	public bool faceUp {       
+		get {           
+			return( !back.activeSelf );   
+		}     
+		set {        
+			back.SetActive(!value);  
+		}  
+	}
 } 
+
+
 
 [System.Serializable] // A Serializable class is able to be edited in the Inspector 
 public class Decorator {     // This class stores information about each decorator or pip from DeckXML     
