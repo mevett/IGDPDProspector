@@ -81,6 +81,12 @@ public class Card : MonoBehaviour {
 		}  
 	}
 
+	// Overriding inherited from MonoBehavior 
+	virtual public void OnMouseUpAsButton() { 
+		print (name); // When clicked, this outputs the card name, for demoing. 
+	} 
+
+
 } 
 
 
